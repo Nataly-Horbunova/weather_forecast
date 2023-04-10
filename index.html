@@ -21,93 +21,53 @@
 <div class="weather-bg">
     <!--    <div class="weather-wrapper">-->
     <input type="text" placeholder="Enter city..." class="city-input">
-    <div class="current-info-wrapper">
+    <div class="current-info-wrapper hidden">
+        <div class="error hidden">Invalid city name. </div>
         <div class="current-city-wrapper">
             <i class="fa-solid fa-location-dot"></i>
-            <span class="current-city-name">Odessa</span>
+            <span class="current-city-name"></span>
         </div>
         <div class="degrees-scale-wrapper">
-            <span class="celsius active">°C</span>
+            <span class="celsius">C</span>
             <span class="fahrenheit">F</span>
         </div>
     </div>
 
-    <div class="current-weather-wrapper">
-        <div class="current-weather-day">
-            <span class="current-weather-today">Today, </span>
-            <span class="current-weather-date">7 April</span>
-        </div>
+    <div class="current-weather-wrapper hidden">
+        <div class="current-weather-day"></div>
         <div class="main-info-wrapper">
-            <img src="./assets/clear_sky.png" alt="" class="current-weather-img">
-            <span class="current-weather-temperature">20°</span>
+            <img src="" alt="weather-icon" class="current-weather-img">
+            <span class="current-weather-temperature"></span>
         </div>
-        <div class="current-weather-description">Sunny</div>
+        <div class="current-weather-description"></div>
 
         <div class="current-weather-parameters">
 
             <div class="sunrise-wrapper parameters-wrapper">
-                    <img src="./assets/sunrise.svg" alt="sunrise-icon" class="parameters-icon parameters-icon">
-                    <span class="sunrise-value parameters-value">06:27am</span>
+                    <img src="./assets/sunrise.svg" alt="weather-icon" class="parameters-icon parameters-icon">
+                    <span class="sunrise-value parameters-value"></span>
             </div>
             <div class="wind-wrapper parameters-wrapper">
                     <img src="./assets/wind.svg" alt="wind-icon" class="parameters-icon parameters-icon">
-                    <span class="wind-value parameters-value">2.0 m/s</span>
+                    <span class="wind-value parameters-value"></span>
             </div>
             <div class="sunset-wrapper parameters-wrapper">
                 <img src="./assets/sunset.svg" alt="sunset-icon" class="parameters-icon parameters-icon">
-                <span class="sunset-value parameters-value">07:38pm</span>
+                <span class="sunset-value parameters-value"></span>
             </div>
-            <div class="preasure-wrapper parameters-wrapper">
-                    <img src="./assets/preasure.svg" alt="preasure-icon" class="parameters-icon parameters-icon">
-                    <span class="preasure-value parameters-value">1020 hPa</span>
+            <div class="pressure-wrapper parameters-wrapper">
+                    <img src="./assets/pressure.svg" alt="pressure-icon" class="parameters-icon parameters-icon">
+                    <span class="pressure-value parameters-value"></span>
             </div>
         </div>
     </div>
 
-    <div class="next-forecast-wrapper">
-        <div class="next-day-forecast active">
-            <div class="next-forecast-date">Today</div>
-            <img src="./assets/clear_sky.png" alt="forecast-icon" class="next-forecast-img">
-            <div class="next-forecast-temperature">
-                <span class="next-forecast-temperature-min">10</span>
-                <span>/</span>
-                <span class="next-forecast-temperature-max">18</span>
-                <span>°C</span>
-            </div>
-        </div>
-        <div class="next-day-forecast">
-            <div class="next-forecast-date">6 Apr</div>
-            <img src="./assets/broken_clouds.png" alt="forecast-icon" class="next-forecast-img">
-            <div class="next-forecast-temperature">
-                <span class="next-forecast-temperature-min">10</span>
-                <span>/</span>
-                <span class="next-forecast-temperature-max">20</span>
-                <span>°C</span>
-            </div>
-        </div>
-        <div class="next-day-forecast">
-            <div class="next-forecast-date">7 Apr</div>
-            <img src="./assets/rain.png" alt="forecast-icon" class="next-forecast-img">
-            <div class="next-forecast-temperature">
-                <span class="next-forecast-temperature-min">8</span>
-                <span>/</span>
-                <span class="next-forecast-temperature-max">15</span>
-                <span>°C</span>
-            </div>
-        </div>
-        <div class="next-day-forecast">
-            <div class="next-forecast-date">8 Apr</div>
-            <img src="./assets/few_clouds.png" alt="forecast-icon" class="next-forecast-img">
-            <div class="next-forecast-temperature">
-                <span class="next-forecast-temperature-min">10</span>
-                <span>/</span>
-                <span class="next-forecast-temperature-max">20</span>
-                <span>°C</span>
-            </div>
-        </div>
-    </div>
+    <div class="next-forecast-wrapper"></div>
 </div>
 
+<script src="./scripts/WeatherStorage.js"></script>
+<script src="./scripts/WeatherModel.js"></script>
+<script src="./scripts/WeatherView.js"></script>
 <script src="./scripts/main.js"></script>
 </body>
 

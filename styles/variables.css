@@ -3,7 +3,7 @@
     --fz-s: clamp(14px, calc(16 / 1200 * 100vw), 16px);
     --fz-m: clamp(16px, calc(18 / 1200 * 100vw), 18px);
     --fz-l: clamp(18px, calc(20 / 1200 * 100vw), 20px);
-    --fz-xl: clamp(50px, calc(60 / 1200 * 100vw), 60px);
+    --fz-xl: clamp(30px, calc(40 / 1200 * 100vw), 40px);
 
     --lh-xs: 120%;
     --lh-s: 130%;
