@@ -1,5 +1,5 @@
 class WeatherStorage {
-    #baseUrl = 'http://api.openweathermap.org/';
+    #baseUrl = 'https://api.openweathermap.org/';
     #appid = '31fdbea09ec46cb0d196ca9d28ad0701';
 
     async requestData(url) {
