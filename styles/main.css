@@ -10,7 +10,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #F0F7FF;
+    /*background-color: #F0F7FF;*/
+    background: url(../assets/background.jpg) center / cover no-repeat fixed;
     font-size: var(--fz-s);
     letter-spacing: 0.4px;
     line-height: var(--lh-s);
@@ -25,9 +26,9 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 414px;
-    margin: 30px auto 0;
+    margin: 10px auto 0;
     padding: clamp(16px, calc(30 / 1200 * 100vw), 30px);;
-    background: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%) center / cover no-repeat fixed;
+    background: linear-gradient(192.05deg,  #47bfdf 0%, #4a91ff6b 100%) center / cover no-repeat fixed;
     box-shadow: -4px 8px 30px 2px rgba(19, 35, 78, 0.2);
     border-radius: 10px;
 
