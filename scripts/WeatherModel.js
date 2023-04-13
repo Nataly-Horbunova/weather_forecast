@@ -4,26 +4,6 @@ class WeatherModel {
     modifiedForecastData = [];
     units = 'metric';
     defaultCity = 'Kyiv';
-    icons = {
-        '01d': './assets/clear_sky.png',
-        '01n': './assets/clear_sky.png',
-        '02d': './assets/few_clouds.png',
-        '02n': './assets/few_clouds.png',
-        '03d': './assets/scattered_clouds.png',
-        '03n': './assets/scattered_clouds.png',
-        '04n': './assets/broken_clouds.png',
-        '04d': './assets/broken_clouds.png',
-        '09d': './assets/shower_rain.png',
-        '09n': './assets/shower_rain.png',
-        '10d': './assets/rain.png',
-        '10n': './assets/rain.png',
-        '11d': './assets/thunderstorm.png',
-        '11n': './assets/thunderstorm.png',
-        '13d': './assets/snow.png',
-        '13n': './assets/snow.png',
-        '50d': './assets/mist.png',
-        '50n': './assets/mist.png',
-    }
 
     constructor(storage) {
         this.weatherStorage = storage;
@@ -185,9 +165,47 @@ class WeatherModel {
     }
 
     findImgSrc(img) {
-        for (let icon in this.icons) {
-            if (img === icon) return this.icons[icon];
+        let iconName;
+        switch (img) {
+            case '01d':
+            case '01n':
+                iconName = 'clear_sky.png';
+                break;
+            case '02d':
+            case '02n':
+                iconName = 'few_clouds.png';
+                break;
+            case '03d':
+            case '03n':
+                iconName = 'scattered_clouds.png';
+                break;
+            case '04d':
+            case '04n':
+                iconName = 'broken_clouds.png';
+                break;
+            case '09d':
+            case '09n':
+                iconName = 'shower_rain.png';
+                break;
+            case '10d':
+            case '10n':
+                iconName = 'rain.png';
+                break;
+            case '11d':
+            case '11n':
+                iconName = 'thunderstorm.png';
+                break;
+            case '13d':
+            case '13n':
+                iconName = 'snow.png';
+                break;
+            case '50d':
+            case '50n':
+                iconName = 'mist.png';
+                break;
         }
+
+        return `./assets/${iconName}`;
     }
 
     convertTime(unixTimestamp) {

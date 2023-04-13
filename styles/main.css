@@ -148,22 +148,22 @@ body {
     flex-direction: column;
     gap: 6px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .next-day-forecast {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 6px 8px;
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
 }
 
 .next-forecast-date {
-    font-size: var(--fz-xs);
-    line-height: var(--lh-xs);
+    font-size: var(--fz-s);
+    line-height: var(--lh-s);
 }
 
 .next-forecast-img {

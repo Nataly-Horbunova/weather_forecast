@@ -87,7 +87,11 @@ class WeatherView {
                 document.querySelectorAll('.next-day-forecast').forEach(item => item.classList.remove('active'));
                 e.currentTarget.classList.add('active');
                 const index = e.currentTarget.dataset.id;
-                this.renderCurrentData(this.weatherModel.modifiedForecastData[index], index);
+                if(i === 0) {
+                    this.renderCurrentData(this.weatherModel.cityData, index);
+                } else {
+                    this.renderCurrentData(this.weatherModel.modifiedForecastData[index], index);
+                }
             });
 
             const dateText = this.weatherModel.getFormattedDate(this.weatherModel.modifiedForecastData[i].dt);
