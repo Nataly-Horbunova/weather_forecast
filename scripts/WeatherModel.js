@@ -157,7 +157,7 @@ class WeatherModel {
         arr.forEach((val) => {
             counts[val] = (counts[val] || 0) + 1;
             if (counts[val] > counts[mostRepeatedVal]) {
-                mostRepeatedVal = val; // обновляем наиболее повторяющееся значение
+                mostRepeatedVal = val; 
             }
         });
 
@@ -216,9 +216,12 @@ class WeatherModel {
         const date = new Date(Date.parse(dateStr));
         const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        const dayOfWeek = weekdays[date.getUTCDay()];
-        const month = months[date.getUTCMonth()];
+        const dayOfWeek = weekdays[date.getDay()];
+        const month = months[date.getMonth()];
+        return `${dayOfWeek}, ${date.getDate()} ${month}`;
+    }
 
-        return `${dayOfWeek}, ${date.getUTCDate()} ${month}`;
+    getCurrentHours(){
+        return new Date().getHours();
     }
 }

@@ -10,13 +10,24 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    /*background-color: #F0F7FF;*/
-    background: url(../assets/background.jpg) center / cover no-repeat fixed;
+    /* background: url(../assets/background_morning.jpg) center / cover no-repeat fixed; */
     font-size: var(--fz-s);
     letter-spacing: 0.4px;
     line-height: var(--lh-s);
     text-shadow: -2px 3px 1px rgba(0, 0, 0, 0.1);
     color: #FFFFFF;
+}
+
+.bg-morning{
+    background: url(../assets/background_morning.jpg) center / cover no-repeat fixed;
+}
+
+.bg-day{
+    background: url(../assets/background_day.jpg) center / cover no-repeat fixed;
+}
+
+.bg-night{
+    background: url(../assets/background_night.jpg) center / cover no-repeat fixed;
 }
 
 

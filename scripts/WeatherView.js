@@ -1,7 +1,7 @@
 class WeatherView {
     inputCityName = document.querySelector('.city-input');
     celsiusBtn = document.querySelector('.celsius');
-    fahrenheitBtn = document.querySelector('.fahrenheit')
+    fahrenheitBtn = document.querySelector('.fahrenheit');    
 
     constructor(model) {
         this.weatherModel = model;
@@ -167,6 +167,19 @@ class WeatherView {
         })
     }
 
+    setBackground() {
+        const currentHours = this.weatherModel.getCurrentHours();
+        const body = document.querySelector('body');
+
+        if (currentHours >= 6 && currentHours < 12) {
+            body.className = 'bg-morning';
+          } else if (currentHours >= 12 && currentHours < 21) {
+            body.className = 'bg-day';
+          } else {
+            body.className = 'bg-night';
+          }
+    }
+
     showError() {
         document.querySelector('.current-city-wrapper').classList.add('hidden');
         document.querySelector('.error').classList.remove('hidden');
@@ -179,6 +192,7 @@ class WeatherView {
     init() {
         this.weatherModel.initRequest()
             .then( () => {
+                this.setBackground();
                 this.renderAll();
                 this.getCityOutput();
                 this.changeUnits();
