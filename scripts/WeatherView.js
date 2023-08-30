@@ -190,9 +190,9 @@ class WeatherView {
     }
 
     init() {
+        this.setBackground();
         this.weatherModel.initRequest()
-            .then( () => {
-                this.setBackground();
+            .then( () => {                
                 this.renderAll();
                 this.getCityOutput();
                 this.changeUnits();
